@@ -46,7 +46,7 @@ public class ValidationItemControllerV2 {
     }
 
     @PostMapping("/add")
-    public String addItemV1(@ModelAttribute Item item, RedirectAttributes redirectAttributes, BindingResult bindingResult) {
+    public String addItemV1(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
         // 검증 로직
         if (!StringUtils.hasText(item.getItemName())) {
